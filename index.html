@@ -22,22 +22,10 @@
     <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor | Interactive rating component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <!-- Rating state start -->
-
-    <div class="container">
+    <div id="card-1" class="container">
       <span id="icon"></span>
       <div class="content">
         <h1>How did we do?</h1>
@@ -53,26 +41,32 @@
         <input type="button" onclick="elementSelected(this)" value="4">
         <input type="button" onclick="elementSelected(this)" value="5">
       </div>
-      <button id="submit">Submit</button>
+      <button id="submit" type="submit" onclick="sendSorted(this)" disabled>Submit</button>
     </div>
-
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
-
-    <!-- -------- You selected -->
-    <!-- Add rating here -->
-    <!-- ----------- out of 5 Thank you! We appreciate you taking the time to give a rating. If
-    you ever need more support, don’t hesitate to get in touch! -->
-
+    <div id="card-2" class="container">
+      <div class="head">
+        <img src="./images/illustration-thank-you.svg" alt="illustration thank you">
+        <div class="info">You selected</div>
+      </div>
+      <div id="desc" class="content">
+        <h1>Thank you!</h1>
+        <p>
+          We appreciate you taking the time to give a rating. If
+          you ever need more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+    </div>
     <!-- Thank you state end -->
 
-    <!-- <div class="attribution">
+    <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
+      >. Coded by <a href="https://github.com/Luis-Fernando-94">Luis Fernando</a>.
+    </div>
 
     <script src="script.js"></script>
   </body>

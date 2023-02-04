@@ -1,12 +1,13 @@
 const buttons = document.querySelectorAll("#buttons input");
+const submit = document.querySelector("#submit");
 
 let number = { value: null };
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    
-
-})
+// if (submit.getAttribute("disabled")) {
+//     submit.addEventListener("mouseover", () => {
+//         submit.style.backgroundColor = "#eabd9f";
+//     })
+// }
 
 function elementSelected(element) {
 
@@ -19,5 +20,22 @@ function elementSelected(element) {
     }
         
     return number.value = element.value;
+
+}
+
+function sendSorted(btn) {
+
+    const card_1 = document.getElementById("card-1");
+    const card_2 = document.getElementById("card-2");
+    const info = document.getElementsByClassName("info")[0];
+
+    if (number.value != null) {
+
+        card_1.style.display = "none";
+        card_2.style.display = "flex";
+
+        info.innerText += ` ${number.value} out of 5`;
+
+    }
 
 }
