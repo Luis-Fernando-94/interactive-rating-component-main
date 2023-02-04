@@ -1,5 +1,11 @@
 :root {
     font-family: 'Overpass', sans-serif;
+
+    /* button active */
+    --btn-active: hsl(217, 12%, 63%);
+
+    /* button disabled */
+    --btn-disabled: hsl(213, 19%, 18%);
 }
 
 body {
@@ -50,10 +56,10 @@ body * {
     margin-top: 32px;
 }
 
-#buttons .btn {
+#buttons input {
     width: 54px;
     height: 54px;
-    background-color: hsl(213, 19%, 18%);
+    background-color: var(--btn-disabled);
     border: none;
     border-radius: 50%;
     font-weight: 700;
@@ -61,9 +67,19 @@ body * {
     transition: background 0.5s;
 }
 
-#buttons .btn:hover {
+#buttons input:hover {
     cursor: pointer;
     background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+}
+
+#buttons .active {
+    background-color: var(--btn-active);
+    color: hsl(0, 0%, 100%);
+}
+
+#buttons .active:hover {
+    background-color: var(--btn-active);
     color: hsl(0, 0%, 100%);
 }
 

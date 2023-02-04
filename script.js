@@ -1,4 +1,4 @@
-const buttons = document.getElementsByClassName("btn");
+const buttons = document.querySelectorAll("#buttons input");
 
 let number = { value: null };
 
@@ -12,11 +12,9 @@ function elementSelected(element) {
 
     for (let i = 0; i < buttons.length; i++) {
         if (buttons[i].value != element.value) {
-            buttons[i].style.backgroundColor = "hsl(213, 19%, 18%)";
-            buttons[i].style.color = "hsl(217, 12%, 63%)";
+            buttons[i].removeAttribute("class");
         } else {
-            element.style.backgroundColor = "hsl(217, 12%, 63%)";
-            element.style.color = "#fff";
+            element.setAttribute("class", "active");
         }
     }
         
