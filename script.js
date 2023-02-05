@@ -3,11 +3,11 @@ const submit = document.querySelector("#submit");
 
 let number = { value: null };
 
-// if (submit.getAttribute("disabled")) {
-//     submit.addEventListener("mouseover", () => {
-//         submit.style.backgroundColor = "#eabd9f";
-//     })
-// }
+document.addEventListener("DOMContentLoaded", () => {
+
+        
+
+})
 
 function elementSelected(element) {
 
@@ -18,12 +18,14 @@ function elementSelected(element) {
             element.setAttribute("class", "active");
         }
     }
+
+    submit.removeAttribute("disabled");
         
     return number.value = element.value;
 
 }
 
-function sendSorted(btn) {
+function sendSorted() {
 
     const card_1 = document.getElementById("card-1");
     const card_2 = document.getElementById("card-2");

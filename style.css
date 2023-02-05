@@ -21,10 +21,6 @@ body * {
     color: hsl(217, 12%, 63%);
 }
 
-#card-1 {
-
-}
-
 #card-2 {
     display: none;
     flex-direction: column;
@@ -117,6 +113,12 @@ body * {
     background-color: #eabd9f;
 }
 
+#submit[disabled]:hover {
+    cursor: default;
+    background-color: #eabd9f;
+    color: #fff;
+}
+
 #submit:hover {
     cursor: pointer;
     background-color: hsl(0, 0%, 100%);
@@ -135,8 +137,7 @@ body * {
     border-radius: 50px;
 }
 
-
-
+/* footer */
 .attribution {
     position: absolute;
     bottom: 0;
@@ -146,3 +147,14 @@ body * {
   .attribution a {
     color: hsl(228, 45%, 44%);
   }
+
+
+@media (max-width: 520px) {
+    #card-1, #card-2 {
+        width: 65vw;
+    }
+
+    #buttons {
+        gap: 10px;
+    }
+}
